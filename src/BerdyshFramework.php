@@ -34,6 +34,12 @@ class BerdyshFramework{
     public function Hello($key){
         printf("[%s]\n",$key) ;
     }
+
+    function SelfTest(){
+        echo __CLASS__ . "\n" ;
+        return TRUE ;
+    }
+
 }
 
 
