@@ -1,11 +1,13 @@
+package=berdysh-framework
+
 all: clean vendor run
 
 run:
-	php vendor/bin/phpunit vendor/berdysh-dev/berdysh-framework/tests
+	php vendor/bin/phpunit vendor/berdysh-dev/${package}/tests
 
 vendor:
 	composer --dev --no-interaction require \
-            berdysh-dev/berdysh-framework \
+            berdysh-dev/${package} \
             phpunit/phpunit
 
 clean:
