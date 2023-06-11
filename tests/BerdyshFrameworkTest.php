@@ -2,10 +2,18 @@
 
     require_once "vendor/autoload.php" ;
 
+    use berdysh_dev\BerdyshFramework ;
+
+    protected BerdyshFramework  $ctx ;
+
     class BerdyshFrameworkTest extends PHPUnit\Framework\TestCase{
+
+        protected function setUp() :void{
+            $this->ctx = new BerdyshFramework() ;
+        }
+
         public function testAll(){
-            echo "\nTest2.!!!\n" ;
-            $this->assertTrue(TRUE) ;
+            $this->assertTrue($this->ctx->SelfTest()) ;
         }
     }
 
