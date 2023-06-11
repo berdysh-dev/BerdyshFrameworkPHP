@@ -6,6 +6,8 @@
 
     class BerdyshFrameworkTest extends PHPUnit\Framework\TestCase{
 
+        protected BerdyshFramework $ctx ;
+
         protected function setUp() :void{
             $this->ctx = new BerdyshFramework() ;
         }
